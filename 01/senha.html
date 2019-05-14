@@ -1,0 +1,69 @@
+<!-- https://github.com/reprograma/T7-jquery
+
+
+https://api.jquery.com/category/events/keyboard-events/
+
+https://api.jquery.com/category/events/mouse-events/ -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+    <link rel="stylesheet" href="js/style.css">
+
+</head>
+
+<body>
+
+    <input type="password" name="senha" id="senha" />
+    
+    <br>
+    <br>
+
+    <div id="forca">Força: </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>$(document).ready(function () {
+        $("#senha").keyup(function(){
+            var senha = $(this).val();
+            var forca = 0;
+            var classificacao = "Sem Classificação"
+
+            if(senha.length > 4){
+                forca += 25;
+            }
+            var regNumerico = new RegExp(/[0-9]/i);
+            var regAlpha = new RegExp(/[a-z]/i);
+            var regAlphaNumerico = new RegExp(/[^a-z0-9]/i);
+
+            if(regNumerico.test(senha)){
+                forca += 25
+            }
+            if(regAlpha.test(senha)){
+                forca += 25
+            }
+            if(regAlphaNumerico.test(senha)){
+                forca += 25
+            }
+            var aceito = "Não"
+            if(forca <= 25){
+                classificacao = "Fraca"
+                $("input").toggleClass("fundoVermelho")
+            }
+            if(forca >= 50){
+                classificacao = "Média"
+                $("input").toggleClass("fundoVerde")
+            }
+            if(forca >= 75){
+                classificacao = "Forte"
+                $("input").toggleClass("fundoVerde")
+            }
+            $("#forca").html(`Força: ${forca} - Senha: ${senha} - Classificação: ${classificacao} - Aceito: ${aceito }`);
+        });
+    });</script>
+</body>
+
+</html>
