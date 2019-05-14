@@ -51,17 +51,20 @@ https://api.jquery.com/category/events/mouse-events/ -->
             var aceito = "Não"
             if(forca <= 25){
                 classificacao = "Fraca"
+                var aceito = "Não"
                 $("input").toggleClass("fundoVermelho")
             }
             if(forca >= 50){
                 classificacao = "Média"
+                var aceito = "Sim"
                 $("input").toggleClass("fundoVerde")
             }
             if(forca >= 75){
                 classificacao = "Forte"
+                var aceito = "Sim"
                 $("input").toggleClass("fundoVerde")
             }
-            $("#forca").html(`Força: ${forca} - Senha: ${senha} - Classificação: ${classificacao} - Aceito: ${aceito }`);
+            $("#forca").html(`Força: ${forca} - Senha: ${senha} - Classificação: ${classificacao} - Aceito: ${aceito}`); // Tem como fazer a validação da var aceito com if ternário (operador ternário)
         });
     });</script>
 </body>
