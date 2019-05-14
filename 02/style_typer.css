@@ -1,0 +1,30 @@
+body{
+    color: crimson;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1440px;
+    justify-content: center;
+}
+.campo-digitacao{
+    border-radius: 5px;
+    border: 1px dashed grey;
+    width: 800px;
+    color: crimson;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.campo-digitacao:focus{
+    outline: none;
+}
+
+.lista{
+    padding: 0;
+}
+
+.lista li{
+    list-style: none;
+}
