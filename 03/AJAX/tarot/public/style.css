@@ -1,0 +1,58 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    flex-direction: column;
+    color: grey;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.titulo{
+    color: crimson;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.image{
+    border: 2px dashed grey;
+    border-radius: 5px;
+}
+
+.tipo{
+    color: crimson;
+    font-weight: bolder;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 50%;
+}
+
+.saiba-mais{
+    text-decoration: none;
+    color: crimson;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+#novaCarta{
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#novaCarta :focus{
+    outline: none;
+}
